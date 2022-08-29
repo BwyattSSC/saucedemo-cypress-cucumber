@@ -1,0 +1,21 @@
+{
+  "name": "saucedemo-cypress-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bryant L Wyatt",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.6.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^12.1.0",
+    "@cypress/webpack-preprocessor": "^5.12.2",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.8.2"
+  }
+}
