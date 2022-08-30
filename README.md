@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Repository provides a working example of using Cypress, Cucumber and the PageObject pattern. This is more so a technical exercise and not necessary promoting or discounting the pros/cons of using the page object pattern.
+Repository provides a working example of using Cypress and Cucumber.
 
 ## Running test
 
@@ -15,7 +15,11 @@ Repository provides a working example of using Cypress, Cucumber and the PageObj
 
 ## TODO
 
-- Plenty but TBD for now.
+- Lift the assertions out of actions into the step definition level.
+- Create a 'Forms' folder to store element constants information for a page.
+- Implement Aliases from webpack.
+- Find an extension that allows easy of navigation between Feature files and Step definitions
+- Add feature tagging
 
 ## Reference Material
 
