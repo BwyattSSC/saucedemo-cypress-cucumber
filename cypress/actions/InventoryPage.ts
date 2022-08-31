@@ -1,9 +1,9 @@
-export function viewInventoryPage(): void {
-  cy.url().should("eq", "https://www.saucedemo.com/inventory.html");
+export function viewInventoryPage(): Cypress.Chainable<string> {
+  return cy.url();
 }
 
-export function countInventoryItems(count: number): void {
-  cy.get(".inventory_item").should("have.length", count);
+export function countInventoryItems(): Cypress.Chainable<JQuery<HTMLElement>> {
+  return cy.get(".inventory_item");
 }
 
 export function addSpecificItemToCart(
@@ -14,11 +14,7 @@ export function addSpecificItemToCart(
     if ($el.text() === itemName) {
       cy.get("[id^=add-to-cart]").then((res) => {
         const elementId = res[index].id;
-        cy.get(`[id=${elementId}]`)
-          .invoke("text")
-          .then((text) => {
-            expect(buttonName).to.equal(text);
-          });
+        cy.get(`[id=${elementId}]`).invoke("text");
         cy.get(`[id=${elementId}]`).click();
       });
     }
