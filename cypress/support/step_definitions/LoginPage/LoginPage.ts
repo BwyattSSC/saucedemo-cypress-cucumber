@@ -10,7 +10,7 @@ import {
   inputUserPassword,
   pressLoginButton,
   loginWithSpecifiedUser,
-} from "../../../actions/LoginPage";
+} from "../../actions/LoginPage";
 
 Given("the {string} is logged in", (loginType: string) => {
   // TODO: Move this out into a fixture.

@@ -3,7 +3,7 @@ import {
   countInventoryItems,
   viewInventoryPage,
   addSpecificItemToCart,
-} from "../../../actions/InventoryPage";
+} from "../../actions/InventoryPage";
 
 When(
   "the user clicks the {string} button for {string}",
