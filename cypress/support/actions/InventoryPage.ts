@@ -12,13 +12,17 @@ export function addSpecificItemToCart(
   buttonName: string,
   itemName: string
 ): void {
-  cy.get(elements.inventoryItemName).each(($el, index) => {
+  getAllInventoryItems().each(($el, index) => {
     if ($el.text() === itemName) {
-      cy.get(`[id^=${elements.addToCart}]`).then((res) => {
+      cy.get(elements.buttonInventory).then((res) => {
         const elementId = res[index].id;
         cy.get(`[id=${elementId}]`).invoke("text");
         cy.get(`[id=${elementId}]`).click();
       });
     }
   });
+}
+
+function getAllInventoryItems(): Cypress.Chainable<JQuery<HTMLElement>> {
+  return cy.get(elements.inventoryItemName);
 }
